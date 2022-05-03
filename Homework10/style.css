@@ -5,7 +5,7 @@
           box-sizing: border-box;
 }
 
-* .first-loading .loading {
+.first-loading .loading {
   margin: 50px auto;
   height: 20px;
   width: 500px;
@@ -15,7 +15,7 @@
   overflow: hidden;
 }
 
-* .first-loading .loading > div {
+.first-loading .loading > div {
   height: 20px;
   width: 0px;
   background: lightblue;
@@ -27,14 +27,14 @@
   color: white;
 }
 
-* .second-loading {
+.second-loading {
   margin: 50px auto;
   height: 100px;
   width: 100px;
   position: relative;
 }
 
-* .second-loading div {
+.second-loading div {
   position: absolute;
   top: 0;
   left: 0;
@@ -44,7 +44,7 @@
           transform: rotate(calc(var(--value) * 45deg));
 }
 
-* .second-loading div::before {
+.second-loading div::before {
   content: "";
   position: absolute;
   top: 0;
@@ -60,7 +60,7 @@
           animation-delay: calc(var(--value) * 0.125s);
 }
 
-* .container {
+.container {
   margin: 50px auto;
   height: 450px;
   border: 2px solid black;
@@ -70,15 +70,15 @@
   background-image: linear-gradient(black, white);
 }
 
-* .container .fire {
+.container .fire {
   width: 60px;
   height: 60px;
   position: relative;
-  -webkit-animation: fire-move 10s ease infinite alternate;
-          animation: fire-move 10s ease infinite alternate;
+  -webkit-animation: fire-move 5s ease calc(var(--valuefire)*1.6s) infinite alternate;
+          animation: fire-move 5s ease calc(var(--valuefire)*1.6s) infinite alternate;
 }
 
-* .container .fire .flame {
+.container .fire .flame {
   bottom: 0;
   position: absolute;
   border-bottom-right-radius: 50%;
@@ -92,7 +92,7 @@
           animation-delay: calc(var(--value)*0.1s);
 }
 
-* .container .fire .red {
+.container .fire .red {
   left: 5px;
   height: 50px;
   width: 50px;
@@ -101,7 +101,7 @@
           box-shadow: 0px 0px 5px 4px OrangeRed;
 }
 
-* .container .fire .orange {
+.container .fire .orange {
   left: 10px;
   width: 40px;
   height: 40px;
@@ -110,13 +110,28 @@
           box-shadow: 0px 0px 9px 4px orange;
 }
 
-* .container .fire .white {
+.container .fire .white {
   left: 15px;
   width: 30px;
   height: 30px;
   background: #e0d8c8;
   -webkit-box-shadow: 0px 0px 9px 4px #e0d8c8;
           box-shadow: 0px 0px 9px 4px #e0d8c8;
+}
+
+.first-child {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.second-child {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.last-child {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 @-webkit-keyframes load {
