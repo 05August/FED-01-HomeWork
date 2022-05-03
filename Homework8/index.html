@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/e41fa28439.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <form>
+      <div id="header">
+        <h1>STUDENT INFORMATION</h1>
+      </div>
+
+      <div id="information">
+        <div id="information-left">
+          <div id="name">
+            <label class="information-label" for="fname">Name</label>
+            <input
+              class="information-input"
+              type="text"
+              id="fname"
+              name="fname"
+              minlength="6"
+              placeholder="type name"
+              required
+            />
+          </div>
+          <div id="password">
+            <label class="information-label" for="fpassword">Password</label>
+            <input
+              class="information-input"
+              type="password"
+              id="fpassword"
+              name="fpasswork"
+              placeholder="type password"
+              required
+            />
+          </div>
+
+          <div id="dob">
+            <label class="information-label" for="fdob">D.O.B</label>
+            <div class="input-date">
+              <input
+                class="information-input"
+                id="fdob"
+                name="fdob"
+                max="2004-01-01"
+                min="1900-01-01"
+                placeholder="01/01/1995"
+                type="date"
+                required
+              />
+              <span class="open-button">
+                <button type="button">
+                  <img src="https://img.icons8.com/windows/32/000000/calendar.png" />
+                </button>
+              </span>
+            </div>
+          </div>
+
+          <div id="vehicle">
+            <label class="information-label" for="fvehicle">Vehicle</label>
+            <select id="information-select" id="fvehicle" name="fvehicle">
+                <option value="car" checked>Car</option>
+                <option value="bike">Bike</option>
+                <option value="bus">Bus</option>
+            </select>
+          </div>
+        </div>
+        <div id="information-right">
+          <div id="email">
+            <label class="information-label" for="femail">Email</label>
+            <input
+              class="information-input"
+              type="text"
+              id="femail"
+              name="femail"
+              placeholder="type email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              required
+            />
+          </div>
+
+          <div id="address">
+            <label class="information-label" for="faddress">Address</label>
+            <input
+              class="information-input"
+              type="text"
+              id="faddress"
+              name="faddress"
+              placeholder="type address"
+              minlength="10"
+              required
+            />
+          </div>
+
+          <div id="phone">
+            <label class="information-label" for="fphone">Phone</label>
+            <input
+              class="information-input"
+              type="number"
+              id="fphone"
+              name="fphone"
+              placeholder="type phonenumber"
+              minlength="10"
+              maxlength="11"
+              required
+            />
+          </div>
+
+          <div id="gender">
+            <label for="gender" class="information-label">Gender</label>
+            <div>
+              <div class="gender-attribute">
+                <input type="radio" name="gender" id="female" checked/>
+                <label for="female" style="display: inline-block"><h3>Female</h3></label>
+              </div>
+
+              <div class="gender-attribute">
+                <input type="radio" name="gender" id="male" />
+                <label for="male" style="display: inline-block"><h3>Male</h3></label>
+              </div>
+
+              <div class="gender-attribute">
+                <input type="radio" name="gender" id="other" />
+                <label for="other" style="display: inline-block"><h3>Other</h3></label>
+              </div>
+
+              <div class="gender-attribute">
+                <input type="radio" name="gender" id="notother" />
+                <label for="notother" style="display: inline-block"
+                  ><h3>Not Other</h3></label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="interesting">
+        <label class="information-label" for="finteresting">Interesting</label>
+        <div>
+          <div class="interesting-checkbox">
+            <div>
+              <input
+                id="checkbox-1"
+                class="checkbox-custom"
+                name="music"
+                type="checkbox"
+                checked
+              />
+              <label for="checkbox-1" class="checkbox-custom-label">Music</label>
+            </div>
+            <div>
+              <input
+                id="checkbox-2"
+                class="checkbox-custom"
+                name="sport"
+                type="checkbox"
+              />
+              <label for="checkbox-2" class="checkbox-custom-label">Sport</label>
+            </div>
+            <div>
+              <input
+                id="checkbox-3"
+                class="checkbox-custom"
+                name="movie"
+                type="checkbox"
+              />
+              <label for="checkbox-3" class="checkbox-custom-label">Movie</label>
+            </div>
+            <div>
+              <input
+                id="checkbox-4"
+                class="checkbox-custom"
+                name="trecking"
+                type="checkbox"
+              />
+              <label for="checkbox-4" class="checkbox-custom-label">Trecking</label>
+            </div>
+            <div>
+              <input
+                id="checkbox-5"
+                class="checkbox-custom"
+                name="Lying"
+                type="checkbox"
+              />
+              <label for="checkbox-5" class="checkbox-custom-label">Lying</label>
+            </div>
+          </div>
+          <div class="interesting-checkbox">
+            
+            <div>
+              <input
+                id="checkbox-6"
+                class="checkbox-custom"
+                name="girl"
+                type="checkbox"
+              />
+              <label for="checkbox-6" class="checkbox-custom-label">Girl</label>
+            </div>
+            <div>
+              <input
+                id="checkbox-7"
+                class="checkbox-custom"
+                name="goku"
+                type="checkbox"
+              />
+              <label for="checkbox-7" class="checkbox-custom-label">Goku</label>
+            </div>
+            <div>
+              <input
+                id="checkbox-8"
+                class="checkbox-custom"
+                name="boy"
+                type="checkbox"
+              />
+              <label for="checkbox-8" class="checkbox-custom-label">Boy</label>
+            </div>
+            <div>
+              <input
+                id="checkbox-9"
+                class="checkbox-custom"
+                name="game"
+                type="checkbox"
+              />
+              <label for="checkbox-9" class="checkbox-custom-label">Game</label>
+            </div>
+            <div>
+              <input
+                id="checkbox-10"
+                class="checkbox-custom"
+                name="other"
+                type="checkbox"
+              />
+              <label for="checkbox-10" class="checkbox-custom-label">Other</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="comment">
+        <textarea
+          required
+          placeholder="Type your comment about this course..."
+        ></textarea>
+      </div>
+      <div id="button">
+        <div id="button-reset">
+          <input type="reset" value="Reset" />
+        </div>
+        <div id="button-submit">
+          <input type="submit" value="Submit" />
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
