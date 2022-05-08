@@ -1,0 +1,84 @@
+@media only screen and (max-width: 769px) {
+  header {
+    .sub-header {
+      .contact {
+        width: 50%;
+      }
+      .account {
+        width: 19%;
+      }
+    }
+    .header {
+      &__slogan {
+        width: 50%;
+      }
+      &__nav {
+        align-items: center;
+        a {
+          display: none;
+        }
+        i {
+          &.fa-magnifying-glass {
+            right: 10%;
+          }
+          &:last-child {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    height: 2400px;
+    .content {
+      flex-direction: column;
+      &__product {
+        width: 100%;
+        &--img {
+          .photo {
+            height: 450px;
+            img {
+              width: 100%;
+            }
+            &-sub {
+              @include center(space-between, unset);
+              div {
+                margin: 0;
+                img {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+
+        &--detail {
+          @include center(space-around, unset);
+        }
+      }
+
+      &__auction {
+        width: 100%;
+        margin-top: 30px;
+        &--price {
+          width: 88%;
+          height: 100px;
+        }
+        &--time {
+          width: 100%;
+          @include center(space-evenly, center);
+          flex-direction: row;
+          p:last-child {
+            width: unset;
+            margin: 0;
+            position: unset;
+          }
+        }
+        &--form{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

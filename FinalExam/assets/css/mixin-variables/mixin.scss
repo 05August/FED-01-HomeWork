@@ -1,0 +1,20 @@
+@mixin center($justify-var,$align-var){
+  display: flex;
+  justify-content:$justify-var;
+  align-items: $align-var;
+}
+
+@mixin absolute-left($left){
+  position: absolute;
+  left: $left;
+}
+
+@mixin absolute-right($right){
+  position: absolute;
+  right: $right;
+}
+
+@mixin icon-size($fontsize){
+  font-size: $fontsize;
+}
+

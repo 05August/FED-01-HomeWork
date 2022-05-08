@@ -1,0 +1,409 @@
+main {
+  position: relative;
+  margin: 0px 5%;
+  margin-top: 30px;
+  height: 1700px;
+  .roadmap {
+    margin-bottom: 30px;
+    i {
+      color: $green5dtext;
+      margin-right: 15px;
+      &::before {
+        font-size: 20px;
+      }
+    }
+    p {
+      display: inline-block;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 21px;
+      color: $blacktext;
+      opacity: 0.5;
+    }
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    &__product {
+      width: 70%;
+      &--infor {
+        .product-name {
+          h3 {
+            font-style: normal;
+            font-weight: 900;
+            font-size: 30px;
+            line-height: 35px;
+            color: $blacktext;
+          }
+        }
+        .product-sub {
+          > div {
+            display: flex;
+            margin-top: 15px;
+            width: 70%;
+            text-align: center;
+            p,
+            span {
+              font-style: italic;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 21px;
+              color: $blacktext;
+              opacity: 0.5;
+              margin-left: 20px;
+            }
+            i {
+              min-width: 23px;
+              &::before {
+                color: $green5dtext;
+                @include icon-size(20px);
+              }
+            }
+            &:last-child {
+              justify-content: space-between;
+            }
+            .span-left {
+              margin-left: 16px;
+            }
+          }
+        }
+      }
+
+      &--img {
+        margin-top: 30px;
+        .photo {
+          width: 100%;
+          height: 550px;
+        }
+        .photo-sub {
+          div {
+            display: inline-block;
+            margin-right: 1%;
+            img {
+              width: 230px;
+              height: 130px;
+            }
+          }
+        }
+      }
+
+      &--detail {
+        div {
+          display: inline-block;
+          height: 60px;
+          width: 246px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 28px;
+          color: $blacktext;
+          opacity: 0.5;
+          @include center(center, center);
+          display: inline-flex;
+          &:first-child {
+            border-bottom: 3px solid $green5dtext;
+            font-weight: 900;
+            opacity: 1;
+          }
+        }
+      }
+
+      &--comment {
+        margin-top: 30px;
+        width: 98%;
+        p {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 21px;
+          color: $blacktext;
+        }
+      }
+    }
+
+    &__auction {
+      width: 35%;
+      @include center(unset, center);
+      flex-direction: column;
+      &--price {
+        width: 80%;
+        height: 175px;
+        position: relative;
+        div {
+          position: absolute;
+          top: 0;
+          height: 80px;
+          width: 100%;
+          background-color: $blacktext;
+          @include center(space-between, center);
+          &::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 40px solid transparent;
+            border-right: 40px solid #1b1f1a;
+            border-bottom: 40px solid transparent;
+            position: absolute;
+            left: -39px;
+          }
+          &::after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 40px solid transparent;
+            border-left: 40px solid $blacktext;
+            border-bottom: 40px solid transparent;
+            position: absolute;
+            right: -39px;
+          }
+
+          span {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 29px;
+            text-transform: uppercase;
+            color: #ffffff;
+            &:last-child {
+              color: $green7dtext;
+            }
+          }
+        }
+      }
+
+      &--time {
+        height: 112px;
+        width: 95%;
+        padding: 0 20px;
+        background: rgba(27, 31, 26, 0.1);
+        border-radius: 5px;
+        position: relative;
+        @include center(center, unset);
+        flex-direction: column;
+        p {
+          &:first-child {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 29px;
+            text-transform: uppercase;
+            color: $blacktext;
+          }
+          &:last-child {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 29px;
+            width: 70%;
+            color: $green5dtext;
+            /* display: inline-block; */
+            margin-top: 5px;
+            word-spacing: 20px;
+            position: relative;
+            left: 40%;
+          }
+        }
+      }
+
+      &--form {
+        margin-top: 20px;
+        height: 700px;
+        width: 95%;
+        background-color: $blacktext;
+        border-radius: 5px;
+
+        div {
+          padding: 0 26px;
+          @include center(space-between, center);
+
+          &:first-child {
+            height: 76px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            font-style: normal;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 29px;
+            text-transform: uppercase;
+            color: $green7dtext;
+          }
+
+          &.topic {
+            height: 60px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            span {
+              font-weight: 700;
+              font-size: 14px;
+              color: $green7dtext;
+              &:first-child {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.5);
+              }
+            }
+          }
+
+          &.button-quantity {
+            width: 90%;
+            height: 52px;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+            margin: 30px auto;
+            margin-bottom: 0px;
+
+            i {
+              font-size: 30px;
+              color: $green7dtext;
+              position: relative;
+              left: -10px;
+              &::after {
+                content: "";
+                height: 35px;
+                border-right: 1px solid rgba(255, 255, 255, 0.5);
+                position: absolute;
+                top: -3px;
+                right: -10px;
+              }
+              &:last-child {
+                left: unset;
+                right: -10px;
+                &::after {
+                  left: -10px;
+                  right: unset;
+                }
+              }
+            }
+          }
+
+          &.button-submit {
+            height: 50px;
+            width: 50%;
+            margin: 30px auto;
+            background-color: $green7dtext;
+            position: relative;
+            border-radius: 3px;
+
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 33px;
+            justify-content: center;
+            color: $blacktext;
+            &::before {
+              content: "";
+              position: absolute;
+              left: -21px;
+              bottom: 0;
+              width: 0;
+              height: 0;
+              border-right: 23px solid $green7dtext;
+              border-top: 25px solid transparent;
+              border-bottom: 25px solid transparent;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              right: -21px;
+              bottom: 0;
+              width: 0;
+              height: 0;
+              border-left: 23px solid $green7dtext;
+              border-top: 25px solid transparent;
+              border-bottom: 25px solid transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .comment {
+    margin-top: 60px;
+    &__title {
+      i {
+        font-size: 20px;
+        color: $green5dtext;
+        margin-right: 25px;
+      }
+      span {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 28px;
+        color: $blacktext;
+      }
+    }
+
+    &__history {
+      margin-top: 20px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      color: $blacktext;
+      opacity: 0.5;
+    }
+
+    &__input {
+      position: relative;
+      textarea {
+        margin-top: 20px;
+        width: 100%;
+        height: 120px;
+        background: rgba(0, 0, 0, 0.05);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        resize: none;
+        padding-top: 25px;
+        padding-left: 25px;
+        &::placeholder {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 21px;
+          color: $blacktext;
+          opacity: 0.5;
+        }
+      }
+
+      &--submit {
+        height: 30px;
+        width: 60px;
+        background: $green7dtext;
+        position: absolute;
+        top: 65px;
+        right: 25px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -15px;
+          left: 0;
+          width: 0;
+          height: 0;
+          border-left: 30px solid transparent;
+          border-right: 30px solid transparent;
+          border-bottom: 15px solid $green7dtext;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -15px;
+          right: 0;
+          width: 0;
+          height: 0;
+          border-left: 30px solid transparent;
+          border-right: 30px solid transparent;
+          border-top: 15px solid $green7dtext;
+        }
+        i {
+          font-size: 30px;
+          padding: 0 15px;
+          transform: rotate(10deg);
+        }
+      }
+    }
+  }
+}
